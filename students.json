@@ -4,5 +4,23 @@
         "Name": "Shikhar Tiwari",
         "Course": "BCA & MCA (Data Science)",
         "Marks": "95"
+    },
+    {
+        "Roll": "102",
+        "Name": "Shivam Yadav",
+        "Course": "BCA & MCA (Data Science)",
+        "Marks": "90"
+    },
+    {
+        "Roll": "103",
+        "Name": "Shivam Tiwari",
+        "Course": "Btech (CSE)",
+        "Marks": "93"
+    },
+    {
+        "Roll": "104",
+        "Name": "Aakash Yadav",
+        "Course": "BSc (Math)",
+        "Marks": "80"
     }
 ]
