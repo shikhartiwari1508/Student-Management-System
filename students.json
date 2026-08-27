@@ -22,5 +22,59 @@
         "Name": "Aakash Yadav",
         "Course": "BSc (Math)",
         "Marks": "80"
+    },
+    {
+        "Roll": "105",
+        "Name": "Ayushi Tiwari",
+        "Course": "MSc (Botony)",
+        "Marks": "93"
+    },
+    {
+        "Roll": "106",
+        "Name": "Yuvraj Mishra",
+        "Course": "Bachlor of Arts (BA)",
+        "Marks": "23"
+    },
+    {
+        "Roll": "107",
+        "Name": "Saurabh Chaurasiya",
+        "Course": "BCA & MCA (Data Science)",
+        "Marks": "83"
+    },
+    {
+        "Roll": "108",
+        "Name": "Krishna Yadav",
+        "Course": "BCom",
+        "Marks": "65"
+    },
+    {
+        "Roll": "109",
+        "Name": "Shantanu Singh",
+        "Course": "BSc (Bio)",
+        "Marks": "78"
+    },
+    {
+        "Roll": "110",
+        "Name": "Anubhav Pandey",
+        "Course": "BSc (Math)",
+        "Marks": "63"
+    },
+    {
+        "Roll": "111",
+        "Name": "Adarsh Singh",
+        "Course": "BSc(Computer Science)",
+        "Marks": "84"
+    },
+    {
+        "Roll": "112",
+        "Name": "Vinay Pandey",
+        "Course": "Btech (CSE)",
+        "Marks": "73"
+    },
+    {
+        "Roll": "113",
+        "Name": "Nitin Prajapati",
+        "Course": "BCom",
+        "Marks": "69"
     }
 ]
