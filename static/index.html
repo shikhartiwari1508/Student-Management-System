@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color"
+          content="#ff6a00">
+
+    <title>
+        University of Allahabad | Student Management System
+    </title>
+
+    <!-- Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet"
+          href="/static/style.css">
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         LOADING SCREEN
+    ====================================================== -->
+
+    <div id="loader">
+
+        <div class="loader-logo">
+
+            <img
+                src="https://www.allduniv.ac.in/public/assets/uploads/media-uploader/whatsapp-image-2021-08-02-at-50302-pm1628769958.jpeg"
+                alt="University of Allahabad">
+
+        </div>
+
+        <div class="loader-ring"></div>
+
+        <h2>
+            UOA SYSTEM
+        </h2>
+
+        <p>
+            Initializing Student Management System...
+        </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+
+    <div class="background-grid"></div>
+
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+    <div class="glow glow-three"></div>
+
+
+    <!-- =====================================================
+         APP
+    ====================================================== -->
+
+    <div class="app">
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="sidebar"
+               id="sidebar">
+
+            <div class="brand">
+
+                <div class="brand-logo">
+
+                    <img
+                        src="https://www.allduniv.ac.in/public/assets/uploads/media-uploader/whatsapp-image-2021-08-02-at-50302-pm1628769958.jpeg"
+                        alt="University of Allahabad Logo">
+
+                </div>
+
+                <div class="brand-text">
+
+                    <h2>UOA</h2>
+
+                    <span>
+                        STUDENT CORE
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="university-mini">
+
+                <strong>
+                    UNIVERSITY OF ALLAHABAD
+                </strong>
+
+                <span>
+                    A Central University
+                </span>
+
+            </div>
+
+
+            <nav class="nav">
+
+                <a href="#dashboard"
+                   class="nav-link active">
+
+                    <i class="fa-solid fa-grid-2"></i>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <a href="#students"
+                   class="nav-link">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <span>
+                        Students
+                    </span>
+
+                </a>
+
+
+                <a href="#analytics"
+                   class="nav-link">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <span>
+                        Analytics
+                    </span>
+
+                </a>
+
+
+                <a href="#top-performers"
+                   class="nav-link">
+
+                    <i class="fa-solid fa-trophy"></i>
+
+                    <span>
+                        Top Performers
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <div class="system-status">
+
+                    <span class="status-dot"></span>
+
+                    <div>
+
+                        <strong>
+                            SYSTEM ONLINE
+                        </strong>
+
+                        <small>
+                            FastAPI Connected
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sidebar-footer">
+
+                    <span>
+                        UOA • SMS
+                    </span>
+
+                    <span>
+                        v2.0
+                    </span>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN CONTENT
+        ================================================== -->
+
+        <main class="main">
+
+
+            <!-- TOP BAR -->
+
+            <header class="topbar">
+
+                <button class="mobile-menu"
+                        id="mobileMenu">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+                <div class="topbar-title">
+
+                    <span class="section-code">
+                        UOA / SMS / DASHBOARD
+                    </span>
+
+                    <h1>
+                        Student Management System
+                    </h1>
+
+                </div>
+
+
+                <div class="topbar-actions">
+
+                    <div class="live-time"
+                         id="liveTime">
+
+                        --:--:--
+
+                    </div>
+
+
+                    <button class="icon-button"
+                            id="refreshBtn"
+                            title="Refresh">
+
+                        <i class="fa-solid fa-rotate"></i>
+
+                    </button>
+
+
+                    <button class="icon-button"
+                            id="notificationBtn"
+                            title="Notifications">
+
+                        <i class="fa-solid fa-bell"></i>
+
+                        <span class="notification-dot"></span>
+
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 HERO
+            ================================================== -->
+
+            <section class="hero"
+                     id="dashboard">
+
+                <div class="hero-content">
+
+                    <div class="hero-tag">
+
+                        <span></span>
+
+                        UNIVERSITY OF ALLAHABAD
+
+                    </div>
+
+
+                    <h2>
+
+                        Academic Data
+                        <span>Command Center</span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Manage student records, monitor academic
+                        performance and explore institutional
+                        analytics from one futuristic dashboard.
+
+                    </p>
+
+
+                    <div class="hero-actions">
+
+                        <button class="primary-btn"
+                                id="openAddModal">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                            Add New Student
+
+                        </button>
+
+
+                        <button class="secondary-btn"
+                                id="exportBtn">
+
+                            <i class="fa-solid fa-download"></i>
+
+                            Export CSV
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-emblem">
+
+                    <div class="emblem-ring">
+
+                        <img
+                            src="https://www.allduniv.ac.in/public/assets/uploads/media-uploader/whatsapp-image-2021-08-02-at-50302-pm1628769958.jpeg"
+                            alt="University of Allahabad">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 STATS
+            ================================================== -->
+
+            <section class="stats-grid">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>
+                            TOTAL STUDENTS
+                        </span>
+
+                        <strong id="totalStudents">
+                            0
+                        </strong>
+
+                    </div>
+
+                    <div class="stat-decoration">
+                        01
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>
+                            ACTIVE COURSES
+                        </span>
+
+                        <strong id="totalCourses">
+                            0
+                        </strong>
+
+                    </div>
+
+                    <div class="stat-decoration">
+                        02
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-chart-simple"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>
+                            AVERAGE MARKS
+                        </span>
+
+                        <strong id="averageMarks">
+                            0%
+                        </strong>
+
+                    </div>
+
+                    <div class="stat-decoration">
+                        03
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>
+                            HIGHEST SCORE
+                        </span>
+
+                        <strong id="highestMarks">
+                            0%
+                        </strong>
+
+                    </div>
+
+                    <div class="stat-decoration">
+                        04
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 STUDENTS
+            ================================================== -->
+
+            <section class="content-section"
+                     id="students">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            DATA REGISTRY
+                        </span>
+
+                        <h2>
+                            Student Records
+                        </h2>
+
+                    </div>
+
+
+                    <button class="small-primary"
+                            id="openAddModal2">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Add Student
+
+                    </button>
+
+                </div>
+
+
+                <!-- FILTER BAR -->
+
+                <div class="filter-panel">
+
+                    <div class="search-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="Search by name, roll, course...">
+
+                        <kbd>
+                            /
+                        </kbd>
+
+                    </div>
+
+
+                    <select id="courseFilter">
+
+                        <option value="">
+                            All Courses
+                        </option>
+
+                    </select>
+
+
+                    <select id="marksFilter">
+
+                        <option value="">
+                            All Marks
+                        </option>
+
+                        <option value="90">
+                            90+ Marks
+                        </option>
+
+                        <option value="80">
+                            80+ Marks
+                        </option>
+
+                        <option value="70">
+                            70+ Marks
+                        </option>
+
+                        <option value="60">
+                            60+ Marks
+                        </option>
+
+                        <option value="40">
+                            40+ Marks
+                        </option>
+
+                        <option value="fail">
+                            Below 40
+                        </option>
+
+                    </select>
+
+
+                    <select id="sortFilter">
+
+                        <option value="default">
+                            Default Order
+                        </option>
+
+                        <option value="nameAsc">
+                            Name A → Z
+                        </option>
+
+                        <option value="nameDesc">
+                            Name Z → A
+                        </option>
+
+                        <option value="marksHigh">
+                            Marks High → Low
+                        </option>
+
+                        <option value="marksLow">
+                            Marks Low → High
+                        </option>
+
+                    </select>
+
+
+                    <button class="clear-filter"
+                            id="clearFilters"
+                            title="Clear Filters">
+
+                        <i class="fa-solid fa-filter-circle-xmark"></i>
+
+                    </button>
+
+                </div>
+
+
+                <!-- TABLE -->
+
+                <div class="table-card">
+
+                    <div class="table-top">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                LIVE DATABASE
+                            </span>
+
+                            <h3>
+                                Enrolled Students
+                            </h3>
+
+                        </div>
+
+
+                        <div class="record-count">
+
+                            <span id="recordCount">
+                                0
+                            </span>
+
+                            RECORDS
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        #
+                                    </th>
+
+                                    <th>
+                                        STUDENT
+                                    </th>
+
+                                    <th>
+                                        ROLL NUMBER
+                                    </th>
+
+                                    <th>
+                                        COURSE
+                                    </th>
+
+                                    <th>
+                                        MARKS
+                                    </th>
+
+                                    <th>
+                                        STATUS
+                                    </th>
+
+                                    <th>
+                                        ACTIONS
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="studentTable">
+
+                                <!-- JS -->
+
+                            </tbody>
+
+                        </table>
+
+
+                        <div class="empty-state"
+                             id="emptyState"
+                             style="display:none;">
+
+                            <div class="empty-icon">
+
+                                <i class="fa-solid fa-user-slash"></i>
+
+                            </div>
+
+                            <h3>
+                                No Students Found
+                            </h3>
+
+                            <p>
+                                Try changing your filters or
+                                add a new student.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 ANALYTICS
+            ================================================== -->
+
+            <section class="content-section"
+                     id="analytics">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            INTELLIGENCE LAYER
+                        </span>
+
+                        <h2>
+                            Academic Analytics
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="analytics-grid">
+
+
+                    <!-- COURSE -->
+
+                    <div class="panel chart-panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+
+                                <span>
+                                    DISTRIBUTION
+                                </span>
+
+                                <h3>
+                                    Students by Course
+                                </h3>
+
+                            </div>
+
+                            <i class="fa-solid fa-chart-column"></i>
+
+                        </div>
+
+
+                        <div class="chart-box">
+
+                            <canvas id="courseChart"></canvas>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PASS FAIL -->
+
+                    <div class="panel chart-panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+
+                                <span>
+                                    PERFORMANCE
+                                </span>
+
+                                <h3>
+                                    Pass vs Fail
+                                </h3>
+
+                            </div>
+
+                            <i class="fa-solid fa-chart-pie"></i>
+
+                        </div>
+
+
+                        <div class="chart-box doughnut-box">
+
+                            <canvas id="performanceChart"></canvas>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MARKS -->
+
+                    <div class="panel chart-panel wide-panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+
+                                <span>
+                                    SCORE ANALYSIS
+                                </span>
+
+                                <h3>
+                                    Marks Distribution
+                                </h3>
+
+                            </div>
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </div>
+
+
+                        <div class="chart-box">
+
+                            <canvas id="marksChart"></canvas>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PERFORMANCE SUMMARY -->
+
+                    <div class="panel performance-panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+
+                                <span>
+                                    SYSTEM SUMMARY
+                                </span>
+
+                                <h3>
+                                    Performance Overview
+                                </h3>
+
+                            </div>
+
+                            <i class="fa-solid fa-gauge-high"></i>
+
+                        </div>
+
+
+                        <div class="progress-item">
+
+                            <div>
+
+                                <span>
+                                    Pass Rate
+                                </span>
+
+                                <strong id="passRate">
+                                    0%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress">
+
+                                <span id="passProgress"></span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="progress-item">
+
+                            <div>
+
+                                <span>
+                                    Average Score
+                                </span>
+
+                                <strong id="averageProgressText">
+                                    0%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress">
+
+                                <span id="averageProgress"></span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="progress-item">
+
+                            <div>
+
+                                <span>
+                                    High Performers
+                                </span>
+
+                                <strong id="highPerformers">
+                                    0
+                                </strong>
+
+                            </div>
+
+                            <div class="progress">
+
+                                <span id="highProgress"></span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 TOP PERFORMERS
+            ================================================== -->
+
+            <section class="content-section"
+                     id="top-performers">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            LEADERBOARD
+                        </span>
+
+                        <h2>
+                            Top Performers
+                        </h2>
+
+                    </div>
+
+                    <span class="live-badge">
+
+                        <span></span>
+
+                        LIVE RANKING
+
+                    </span>
+
+                </div>
+
+
+                <div class="leaderboard"
+                     id="topStudents">
+
+                    <!-- JS -->
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 FOOTER
+            ================================================== -->
+
+            <footer>
+
+                <div class="footer-brand">
+
+                    <img
+                        src="https://www.allduniv.ac.in/public/assets/uploads/media-uploader/whatsapp-image-2021-08-02-at-50302-pm1628769958.jpeg"
+                        alt="University of Allahabad">
+
+                    <div>
+
+                        <strong>
+                            UNIVERSITY OF ALLAHABAD
+                        </strong>
+
+                        <span>
+                            Student Management System
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="footer-note">
+
+                    Academic / Portfolio Demo Project
+                    • Not an official University system
+
+                </div>
+
+
+                <div class="footer-copy">
+
+                    UOA • SMS © 2026
+
+                </div>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+         ADD / EDIT MODAL
+    ====================================================== -->
+
+    <div class="modal-overlay"
+         id="studentModal">
+
+        <div class="modal">
+
+            <button class="modal-close"
+                    id="closeModal">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <div class="modal-header">
+
+                <div class="modal-icon">
+
+                    <i class="fa-solid fa-user-graduate"></i>
+
+                </div>
+
+                <div>
+
+                    <span class="eyebrow">
+                        STUDENT REGISTRY
+                    </span>
+
+                    <h2 id="modalTitle">
+                        Add Student
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <form id="studentForm">
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Roll Number
+                        </label>
+
+                        <div class="input-wrap">
+
+                            <i class="fa-solid fa-id-card"></i>
+
+                            <input
+                                type="text"
+                                id="rollInput"
+                                required
+                                placeholder="e.g. 104">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Student Name
+                        </label>
+
+                        <div class="input-wrap">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="nameInput"
+                                required
+                                placeholder="Enter full name">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Course
+                        </label>
+
+                        <div class="input-wrap">
+
+                            <i class="fa-solid fa-graduation-cap"></i>
+
+                            <input
+                                type="text"
+                                id="courseInput"
+                                required
+                                placeholder="e.g. BCA">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Marks
+                        </label>
+
+                        <div class="input-wrap">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                            <input
+                                type="number"
+                                id="marksInput"
+                                required
+                                min="0"
+                                max="100"
+                                placeholder="0 - 100">
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button type="button"
+                            class="secondary-btn"
+                            id="cancelModal">
+
+                        Cancel
+
+                    </button>
+
+
+                    <button type="submit"
+                            class="primary-btn">
+
+                        <i class="fa-solid fa-floppy-disk"></i>
+
+                        <span id="saveButtonText">
+                            Save Student
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         VIEW STUDENT MODAL
+    ====================================================== -->
+
+    <div class="modal-overlay"
+         id="viewModal">
+
+        <div class="modal view-modal">
+
+            <button class="modal-close"
+                    id="closeViewModal">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <div id="studentDetails">
+
+                <!-- JS -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         DELETE MODAL
+    ====================================================== -->
+
+    <div class="modal-overlay"
+         id="deleteModal">
+
+        <div class="modal delete-modal">
+
+            <div class="delete-icon">
+
+                <i class="fa-solid fa-trash"></i>
+
+            </div>
+
+
+            <h2>
+                Delete Student?
+            </h2>
+
+
+            <p>
+
+                This action will permanently remove
+                this student record from the system.
+
+            </p>
+
+
+            <div class="form-actions">
+
+                <button class="secondary-btn"
+                        id="cancelDelete">
+
+                    Cancel
+
+                </button>
+
+
+                <button class="danger-btn"
+                        id="confirmDelete">
+
+                    <i class="fa-solid fa-trash"></i>
+
+                    Delete
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div class="toast-container"
+         id="toastContainer">
+
+    </div>
+
+
+    <!-- JS -->
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>
