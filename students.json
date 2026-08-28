@@ -76,5 +76,17 @@
         "Name": "Nitin Prajapati",
         "Course": "BCom",
         "Marks": "69"
+    },
+    {
+        "Roll": "114",
+        "Name": "Ansh Pal",
+        "Course": "Bachlor of Arts (BA)",
+        "Marks": "70"
+    },
+    {
+        "Roll": "115",
+        "Name": "Aditya Singh",
+        "Course": "BCA & MCA (Data Science)",
+        "Marks": "88"
     }
 ]
