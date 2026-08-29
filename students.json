@@ -9,13 +9,13 @@
         "Roll": "102",
         "Name": "Shivam Yadav",
         "Course": "BCA & MCA (Data Science)",
-        "Marks": "90"
+        "Marks": "82"
     },
     {
         "Roll": "103",
         "Name": "Shivam Tiwari",
         "Course": "Btech (CSE)",
-        "Marks": "93"
+        "Marks": "90"
     },
     {
         "Roll": "104",
@@ -88,5 +88,11 @@
         "Name": "Aditya Singh",
         "Course": "BCA & MCA (Data Science)",
         "Marks": "88"
+    },
+    {
+        "Roll": "116",
+        "Name": "Shaurya Sharma",
+        "Course": "MCom",
+        "Marks": "64"
     }
 ]
