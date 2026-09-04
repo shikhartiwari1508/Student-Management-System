@@ -142,5 +142,11 @@
         "Name": "Suryansh Tiwari",
         "Course": "BCA & MCA (Data Science)",
         "Marks": "75"
+    },
+    {
+        "Roll": "125",
+        "Name": "Devi Dutt",
+        "Course": "BCA & MCA (Data Science)",
+        "Marks": "85"
     }
 ]
