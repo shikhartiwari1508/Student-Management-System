@@ -43,6 +43,12 @@ https://student-management-system-z71u.onrender.com/
 
 ---
 
+## 📜 License
+
+This project is intended for educational and portfolio purposes.
+
+---
+
 ## 📂 Project Structure
 
 ```text
@@ -60,7 +66,3 @@ Student-Management-System/
 │   └── index.html
 │
 └── ...
-
-## 📜 License
-
-This project is intended for educational and portfolio purposes.
