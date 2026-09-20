@@ -45,7 +45,7 @@ https://student-management-system-z71u.onrender.com/
 
 ## 📜 License
 
-This project is intended for educational and portfolio purposes.
+This project is created for educational and portfolio purposes.
 
 ---
 
