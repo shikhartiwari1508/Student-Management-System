@@ -60,3 +60,7 @@ Student-Management-System/
 │   └── index.html
 │
 └── ...
+
+## 📜 License
+
+This project is intended for educational and portfolio purposes.
