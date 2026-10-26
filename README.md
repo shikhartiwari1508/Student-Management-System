@@ -38,6 +38,7 @@ https://student-management-system-z71u.onrender.com/
 ### Tools & Deployment
 - Git
 - GitHub
+- Vercel
 - Render
 - VS Code
 
